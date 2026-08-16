@@ -32,6 +32,15 @@ npm test           # 运行全部测试
 npm run build      # 生产构建（输出到 dist/）
 ```
 
+## 下载 Windows 可执行文件
+
+直接下载便携版（免安装，双击即用）：
+
+- 最新版：[chem-app-1.0.0.exe](https://github.com/xingchui/chem-app/releases/latest/download/chem-app-1.0.0.exe)
+- 或前往 [Releases 页面](https://github.com/xingchui/chem-app/releases) 选择版本
+
+> 说明：GitHub Release 资产使用 ASCII 文件名（`chem-app-<版本>.exe`）以兼容各平台下载；本地打包产物仍为中文名（见下节）。
+
 ## 打包 Windows 可执行文件
 
 ```bash
