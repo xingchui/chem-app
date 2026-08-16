@@ -1,0 +1,10 @@
+:root {
+  font: 16px/1.6 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}

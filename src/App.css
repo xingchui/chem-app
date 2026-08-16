@@ -1,0 +1,513 @@
+:root {
+  --grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --border: #e2e6ec;
+  --text: #333;
+  --text-muted: #666;
+  --primary: #667eea;
+  --ok: #28a745;
+  --ok-bg: #d4edda;
+  --ok-border: #28a745;
+  --err: #dc3545;
+  --err-bg: #f8d7da;
+  --err-border: #dc3545;
+  --radius: 12px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ── Header（渐变横幅） ── */
+.app-header {
+  background: var(--grad);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  color: #333;
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+/* ── 首页模式选择 ── */
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.mode-card {
+  background: var(--grad);
+  color: white;
+  padding: 25px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  font-family: inherit;
+}
+
+.mode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.mode-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.mode-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.mode-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ── 章节三级选择列表 ── */
+.select-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.select-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 18px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.select-item:hover {
+  border-color: var(--primary);
+  background: #f6f7ff;
+  transform: translateX(4px);
+}
+
+.select-item-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.select-item-meta {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.select-item-arrow {
+  color: var(--primary);
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+/* ── 进度条 ── */
+.progress-bar {
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--grad);
+  transition: width 0.3s;
+}
+
+/* ── 题号信息 ── */
+.question-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.tag {
+  background: #e9ecef;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* ── 题目卡 ── */
+.question-text {
+  color: #333;
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.hint {
+  margin-bottom: 10px;
+}
+
+.hint-small {
+  color: #999;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.hint-text {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #856404;
+}
+
+/* ── 输入区 ── */
+.input-area textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: 'Consolas', 'SFMono-Regular', Menlo, monospace;
+  resize: vertical;
+  min-height: 80px;
+  color: var(--text);
+}
+
+.input-area textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* 快捷符号栏 */
+.shortcut-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.shortcut-btn {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.shortcut-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.shortcut-btn .label {
+  font-size: 12px;
+  color: #666;
+  display: block;
+}
+
+.shortcut-btn:hover .label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── 实时预览 ── */
+.preview {
+  margin-top: 14px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafbfc;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.preview-latex {
+  font-size: 18px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.preview-error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--err);
+  text-align: center;
+}
+
+.preview-placeholder {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ── 按钮 ── */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.button-group-center {
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--grad);
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.btn-success {
+  background: var(--ok);
+}
+
+.btn-danger {
+  background: var(--err);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  font-size: 13px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid #ccc;
+}
+
+/* ── 判定结果 ── */
+.answer-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--border);
+}
+
+.answer-correct {
+  border-left-color: var(--ok);
+}
+
+.answer-wrong {
+  border-left-color: var(--err);
+}
+
+.answer-title {
+  color: #333;
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.answer-correct .answer-title {
+  color: var(--ok);
+}
+
+.answer-wrong .answer-title {
+  color: var(--err);
+}
+
+.equation-display {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 1.8;
+  overflow-x: auto;
+}
+
+.correct-equation {
+  background: var(--ok-bg);
+  border-left: 4px solid var(--ok);
+}
+
+.wrong-equation {
+  background: var(--err-bg);
+  border-left: 4px solid var(--err);
+}
+
+.eq-label {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.user-input-text {
+  font-family: 'Consolas', monospace;
+  font-size: 16px;
+}
+
+.result-messages {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #721c24;
+}
+
+.result-messages li {
+  margin-bottom: 4px;
+}
+
+/* ── 统计 ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background: var(--grad);
+  color: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+
+.stat-card p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ── 完成面板 ── */
+.done-card {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.done-score {
+  margin: 0;
+  font-size: 16px;
+}
+
+.done-score strong {
+  font-size: 26px;
+  color: var(--primary);
+}
+
+.done-ratio {
+  margin: 8px 0 24px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ── 响应式 ── */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 28px;
+  }
+  .app-header {
+    padding: 24px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .mode-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
