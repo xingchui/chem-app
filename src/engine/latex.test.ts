@@ -77,13 +77,13 @@ describe('eqToLatex', () => {
     expect(eqToLatex(parseEquation('NaOH + HCl = NaCl + H2O'))).toBe('NaOH + HCl = NaCl + H_{2}O')
   })
 
-  it('箭头与等号等价渲染：→ 显示为 =', () => {
-    expect(eqToLatex(parseEquation('NaOH + HCl → NaCl + H2O'))).toBe('NaOH + HCl = NaCl + H_{2}O')
+  it('→ 渲染为 \\rightarrow', () => {
+    expect(eqToLatex(parseEquation('NaOH + HCl → NaCl + H2O'))).toBe('NaOH + HCl \\rightarrow NaCl + H_{2}O')
   })
 
-  it('箭头与等号等价渲染：→[条件] 显示为 =[条件]', () => {
+  it('→[条件] 渲染为 \\overset{条件}{\\rightarrow}', () => {
     expect(eqToLatex(parseEquation('Fe2O3 + 3CO →[高温] 2Fe + 3CO2↑'))).toBe(
-      'Fe_{2}O_{3} + 3CO \\overset{\\text{高温}}{=} 2Fe + 3CO_{2}\\uparrow',
+      'Fe_{2}O_{3} + 3CO \\overset{\\text{高温}}{\\rightarrow} 2Fe + 3CO_{2}\\uparrow',
     )
   })
 

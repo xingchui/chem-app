@@ -1217,7 +1217,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '乙烷在氧气中燃烧（烷烃通性）',
-    answer: '2C2H6 + 7O2 =[点燃] 4CO2 + 6H2O',
+    answer: '2C2H6 + 7O2 →[点燃] 4CO2 + 6H2O',
     hint: '烷烃完全燃烧生成 CO2 和 H2O',
   },
   {
@@ -1226,7 +1226,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '丙烷在氧气中燃烧',
-    answer: 'C3H8 + 5O2 =[点燃] 3CO2 + 4H2O',
+    answer: 'C3H8 + 5O2 →[点燃] 3CO2 + 4H2O',
     hint: '配平：碳原子数决定 CO2 系数',
   },
   {
@@ -1235,7 +1235,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '甲烷与氯气在光照下取代（第一步，一氯代）',
-    answer: 'CH4 + Cl2 =[光照] CH3Cl + HCl',
+    answer: 'CH4 + Cl2 →[光照] CH3Cl + HCl',
     hint: '取代反应，条件为光照',
   },
   {
@@ -1244,7 +1244,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '一氯甲烷继续与氯气光照取代（二氯代）',
-    answer: 'CH3Cl + Cl2 =[光照] CH2Cl2 + HCl',
+    answer: 'CH3Cl + Cl2 →[光照] CH2Cl2 + HCl',
     hint: '逐步取代，甲烷四步取代的第二步',
   },
   {
@@ -1253,7 +1253,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '二氯甲烷继续与氯气光照取代（三氯代）',
-    answer: 'CH2Cl2 + Cl2 =[光照] CHCl3 + HCl',
+    answer: 'CH2Cl2 + Cl2 →[光照] CHCl3 + HCl',
     hint: '产物为三氯甲烷（氯仿）',
   },
   {
@@ -1262,7 +1262,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '三氯甲烷继续与氯气光照取代（四氯代）',
-    answer: 'CHCl3 + Cl2 =[光照] CCl4 + HCl',
+    answer: 'CHCl3 + Cl2 →[光照] CCl4 + HCl',
     hint: '最终产物四氯化碳，常用作灭火剂',
   },
   {
@@ -1271,7 +1271,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '甲烷高温分解（隔绝空气）',
-    answer: 'CH4 =[高温] C + 2H2',
+    answer: 'CH4 →[高温] C + 2H2',
     hint: '产物为炭黑和氢气',
   },
   {
@@ -1280,7 +1280,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '乙烷与氯气光照取代（一氯代）',
-    answer: 'C2H6 + Cl2 =[光照] C2H5Cl + HCl',
+    answer: 'C2H6 + Cl2 →[光照] C2H5Cl + HCl',
     hint: '乙烷中一个氢被氯取代',
   },
   {
@@ -1289,7 +1289,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '丁烷（C4H10）在氧气中燃烧',
-    answer: '2C4H10 + 13O2 =[点燃] 8CO2 + 10H2O',
+    answer: '2C4H10 + 13O2 →[点燃] 8CO2 + 10H2O',
     hint: '配平：2C4H10 提供 8 个 C 和 20 个 H',
   },
   {
@@ -1298,7 +1298,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第一节 认识有机化合物',
     description: '己烷（C6H14）在氧气中燃烧',
-    answer: '2C6H14 + 19O2 =[点燃] 12CO2 + 14H2O',
+    answer: '2C6H14 + 19O2 →[点燃] 12CO2 + 14H2O',
     hint: '烷烃燃烧通式：CnH2n+2 完全燃烧',
   },
 
@@ -1308,7 +1308,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '乙烯（CH2=CH2）在氧气中燃烧（火焰明亮）',
-    answer: 'C2H4 + 3O2 =[点燃] 2CO2 + 2H2O',
+    answer: 'C2H4 + 3O2 →[点燃] 2CO2 + 2H2O',
     hint: '乙烯含碳量高，燃烧火焰明亮并伴有黑烟',
   },
   {
@@ -1317,7 +1317,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '乙烯与溴水反应（溴水褪色，加成）',
-    answer: 'CH2=CH2 + Br2 = CH2BrCH2Br',
+    answer: 'CH2=CH2 + Br2 → CH2BrCH2Br',
     hint: '加成反应：双键打开，溴原子加到两个碳上',
   },
   {
@@ -1326,7 +1326,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '乙烯与氢气加成（催化剂加热）',
-    answer: 'CH2=CH2 + H2 =[催化剂][加热] CH3CH3',
+    answer: 'CH2=CH2 + H2 →[催化剂][加热] CH3CH3',
     hint: '乙烯加氢还原为乙烷',
   },
   {
@@ -1335,7 +1335,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '乙烯与氯化氢加成',
-    answer: 'CH2=CH2 + HCl =[催化剂] CH3CH2Cl',
+    answer: 'CH2=CH2 + HCl →[催化剂] CH3CH2Cl',
     hint: '产物为氯乙烷',
   },
   {
@@ -1344,7 +1344,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '乙烯与水加成（工业制乙醇）',
-    answer: 'CH2=CH2 + H2O =[催化剂][加热] CH3CH2OH',
+    answer: 'CH2=CH2 + H2O →[催化剂][加热] CH3CH2OH',
     hint: '条件为催化剂并加热，产物乙醇',
   },
   {
@@ -1353,7 +1353,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第二节 乙烯与有机高分子材料',
     description: '丙烷高温裂解（制乙烯）',
-    answer: 'C3H8 =[高温] CH4 + C2H4',
+    answer: 'C3H8 →[高温] CH4 + C2H4',
     hint: '裂解是深度裂化，产物为甲烷和乙烯',
   },
 
@@ -1363,7 +1363,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙醇在氧气中燃烧（绿色能源）',
-    answer: 'C2H5OH + 3O2 =[点燃] 2CO2 + 3H2O',
+    answer: 'C2H5OH + 3O2 →[点燃] 2CO2 + 3H2O',
     hint: '乙醇完全燃烧生成 CO2 和 H2O',
   },
   {
@@ -1372,7 +1372,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙醇与金属钠反应（钠浮在乙醇中缓慢反应）',
-    answer: '2CH3CH2OH + 2Na = 2CH3CH2ONa + H2↑',
+    answer: '2CH3CH2OH + 2Na → 2CH3CH2ONa + H2↑',
     hint: '羟基中的氢被钠置换，生成乙醇钠和氢气',
   },
   {
@@ -1381,7 +1381,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙醇催化氧化制乙醛（铜或银作催化剂）',
-    answer: '2CH3CH2OH + O2 =[催化剂][加热] 2CH3CHO + 2H2O',
+    answer: '2CH3CH2OH + O2 →[催化剂][加热] 2CH3CHO + 2H2O',
     hint: '铜丝红热插入乙醇中反复氧化，条件为催化剂并加热',
   },
   {
@@ -1390,7 +1390,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙酸与碳酸钠反应（酸性比较）',
-    answer: '2CH3COOH + Na2CO3 = 2CH3COONa + H2O + CO2↑',
+    answer: '2CH3COOH + Na2CO3 → 2CH3COONa + H2O + CO2↑',
     hint: '证明乙酸酸性强于碳酸',
   },
   {
@@ -1399,7 +1399,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙酸与碳酸氢钠反应（除水垢原理）',
-    answer: 'CH3COOH + NaHCO3 = CH3COONa + H2O + CO2↑',
+    answer: 'CH3COOH + NaHCO3 → CH3COONa + H2O + CO2↑',
     hint: '碳酸氢钠碱性更强，与乙酸反应更剧烈',
   },
   {
@@ -1408,7 +1408,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙酸与氢氧化钠中和反应',
-    answer: 'CH3COOH + NaOH = CH3COONa + H2O',
+    answer: 'CH3COOH + NaOH → CH3COONa + H2O',
     hint: '乙酸是弱酸，与强碱中和',
   },
   {
@@ -1435,7 +1435,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '乙酸与镁条反应',
-    answer: '2CH3COOH + Mg = (CH3COO)2Mg + H2↑',
+    answer: '2CH3COOH + Mg → (CH3COO)2Mg + H2↑',
     hint: '乙酸有酸性，与活泼金属反应放氢气',
   },
   {
@@ -1444,7 +1444,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第三节 乙醇与乙酸',
     description: '甲醇在氧气中燃烧（醇类通性）',
-    answer: '2CH3OH + 3O2 =[点燃] 2CO2 + 4H2O',
+    answer: '2CH3OH + 3O2 →[点燃] 2CO2 + 4H2O',
     hint: '甲醇燃烧无烟无尘，是车用清洁燃料',
   },
 
@@ -1454,7 +1454,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第四节 基本营养物质',
     description: '葡萄糖在人体内缓慢氧化（有氧呼吸）',
-    answer: 'C6H12O6 + 6O2 = 6CO2 + 6H2O',
+    answer: 'C6H12O6 + 6O2 → 6CO2 + 6H2O',
     hint: '葡萄糖燃烧释放能量，供人体生命活动',
   },
   {
@@ -1463,7 +1463,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第四节 基本营养物质',
     description: '葡萄糖在酒化酶作用下发酵制乙醇',
-    answer: 'C6H12O6 =[催化剂] 2C2H5OH + 2CO2↑',
+    answer: 'C6H12O6 →[催化剂] 2C2H5OH + 2CO2↑',
     hint: '发酵条件为酒化酶（以催化剂表示）',
   },
   {
@@ -1472,7 +1472,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第四节 基本营养物质',
     description: '葡萄糖在酶作用下转化为乳酸（无氧呼吸）',
-    answer: 'C6H12O6 = 2C3H6O3',
+    answer: 'C6H12O6 → 2C3H6O3',
     hint: '乳酸分子式为 C3H6O3',
   },
   {
@@ -1481,7 +1481,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第七章 有机化合物',
     section: '第四节 基本营养物质',
     description: '蔗糖水解（产物为葡萄糖和果糖）',
-    answer: 'C12H22O11 + H2O =[催化剂] C6H12O6 + C6H12O6',
+    answer: 'C12H22O11 + H2O →[催化剂] C6H12O6 + C6H12O6',
     hint: '一分子蔗糖水解生成一分子葡萄糖和一分子果糖',
   },
   {
@@ -2082,7 +2082,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第一节 烷烃',
     description: '戊烷（C5H12）在氧气中完全燃烧',
-    answer: 'C5H12 + 8O2 =[点燃] 5CO2 + 6H2O',
+    answer: 'C5H12 + 8O2 →[点燃] 5CO2 + 6H2O',
     hint: '烷烃燃烧通式：CnH2n+2 完全燃烧生成 CO2 和 H2O',
   },
   {
@@ -2091,7 +2091,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第二节 烯烃 炔烃',
     description: '乙炔在氧气中完全燃烧（氧炔焰，可切割金属）',
-    answer: '2C2H2 + 5O2 =[点燃] 4CO2 + 2H2O',
+    answer: '2C2H2 + 5O2 →[点燃] 4CO2 + 2H2O',
     hint: '乙炔含碳量高，燃烧温度可达 3000℃ 以上',
   },
   {
@@ -2100,7 +2100,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第二节 烯烃 炔烃',
     description: '乙炔与足量溴水加成（溴水褪色）',
-    answer: 'CH≡CH + 2Br2 = CHBr2CHBr2',
+    answer: 'CH≡CH + 2Br2 → CHBr2CHBr2',
     hint: '乙炔含三键，与溴按 1:2 加成，产物为 1,1,2,2-四溴乙烷',
   },
   {
@@ -2109,7 +2109,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第二节 烯烃 炔烃',
     description: '乙炔与氯化氢加成制氯乙烯（合成 PVC 的单体）',
-    answer: 'CH≡CH + HCl =[催化剂] CH2=CHCl',
+    answer: 'CH≡CH + HCl →[催化剂] CH2=CHCl',
     hint: '加成产物氯乙烯含碳碳双键，可加聚为聚氯乙烯',
   },
   {
@@ -2118,7 +2118,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第二节 烯烃 炔烃',
     description: '乙炔与足量氢气加成（催化剂加热）',
-    answer: 'CH≡CH + 2H2 =[催化剂][加热] CH3CH3',
+    answer: 'CH≡CH + 2H2 →[催化剂][加热] CH3CH3',
     hint: '三键依次加成，最终生成乙烷',
   },
   {
@@ -2127,7 +2127,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第二节 烯烃 炔烃',
     description: '丙烯与溴水加成',
-    answer: 'CH2=CHCH3 + Br2 = CH2BrCHBrCH3',
+    answer: 'CH2=CHCH3 + Br2 → CH2BrCHBrCH3',
     hint: '双键打开，溴原子加成到相邻两个碳原子上',
   },
   {
@@ -2136,7 +2136,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '苯在氧气中燃烧（火焰明亮，带浓烟）',
-    answer: '2C6H6 + 15O2 =[点燃] 12CO2 + 6H2O',
+    answer: '2C6H6 + 15O2 →[点燃] 12CO2 + 6H2O',
     hint: '苯含碳量高，燃烧产生大量黑烟',
   },
   {
@@ -2145,7 +2145,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '苯与液溴在铁粉（FeBr3）催化下反应（取代）',
-    answer: 'C6H6 + Br2 =[催化剂] C6H5Br + HBr',
+    answer: 'C6H6 + Br2 →[催化剂] C6H5Br + HBr',
     hint: '苯环上的氢被溴原子取代，生成溴苯和溴化氢',
   },
   {
@@ -2154,7 +2154,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '苯的硝化反应（浓硫酸作催化剂和脱水剂）',
-    answer: 'C6H6 + HNO3 =[浓硫酸][加热] C6H5NO2 + H2O',
+    answer: 'C6H6 + HNO3 →[浓硫酸][加热] C6H5NO2 + H2O',
     hint: '生成硝基苯，条件为浓硫酸并加热（50~60℃）',
   },
   {
@@ -2163,7 +2163,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '苯的磺化反应（与浓硫酸加热）',
-    answer: 'C6H6 + H2SO4 =[加热] C6H5SO3H + H2O',
+    answer: 'C6H6 + H2SO4 →[加热] C6H5SO3H + H2O',
     hint: '生成苯磺酸，苯磺酸可溶于水',
   },
   {
@@ -2172,7 +2172,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '甲苯与浓硝酸反应制 TNT（三硝基甲苯）',
-    answer: 'C6H5CH3 + 3HNO3 =[浓硫酸][加热] C6H2(NO2)3CH3 + 3H2O',
+    answer: 'C6H5CH3 + 3HNO3 →[浓硫酸][加热] C6H2(NO2)3CH3 + 3H2O',
     hint: '甲苯苯环上三个氢被硝基取代，TNT 是烈性炸药',
   },
   {
@@ -2181,7 +2181,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第二章 烃',
     section: '第三节 芳香烃',
     description: '苯与氢气加成生成环己烷（催化剂加热）',
-    answer: 'C6H6 + 3H2 =[催化剂][加热] C6H12',
+    answer: 'C6H6 + 3H2 →[催化剂][加热] C6H12',
     hint: '苯环在镍催化下加氢，生成环己烷',
   },
 
@@ -2194,7 +2194,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第一节 卤代烃',
     description: '溴乙烷在氢氧化钠水溶液中加热水解生成乙醇',
-    answer: 'CH3CH2Br + NaOH =[加热] CH3CH2OH + NaBr',
+    answer: 'CH3CH2Br + NaOH →[加热] CH3CH2OH + NaBr',
     hint: '卤代烃水解是取代反应，生成醇和卤化钠',
   },
   {
@@ -2203,7 +2203,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第一节 卤代烃',
     description: '溴乙烷在氢氧化钠醇溶液中加热消去（制乙烯）',
-    answer: 'CH3CH2Br + NaOH =[醇][加热] CH2=CH2↑ + NaBr + H2O',
+    answer: 'CH3CH2Br + NaOH →[醇][加热] CH2=CH2↑ + NaBr + H2O',
     hint: '消去反应的条件是 NaOH 醇溶液并加热',
   },
   {
@@ -2212,7 +2212,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第一节 卤代烃',
     description: '1,2-二溴乙烷在氢氧化钠醇溶液中加热消去（制乙炔）',
-    answer: 'CH2BrCH2Br + 2NaOH =[醇][加热] CH≡CH↑ + 2NaBr + 2H2O',
+    answer: 'CH2BrCH2Br + 2NaOH →[醇][加热] CH≡CH↑ + 2NaBr + 2H2O',
     hint: '两分子 HBr 消去后生成乙炔',
   },
   {
@@ -2221,7 +2221,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第一节 卤代烃',
     description: '氯乙烷在氢氧化钠水溶液中加热水解',
-    answer: 'CH3CH2Cl + NaOH =[加热] CH3CH2OH + NaCl',
+    answer: 'CH3CH2Cl + NaOH →[加热] CH3CH2OH + NaCl',
     hint: '氯代烃水解生成醇',
   },
   {
@@ -2230,7 +2230,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '乙醇在浓硫酸催化下加热消去制乙烯（170℃）',
-    answer: 'CH3CH2OH =[浓硫酸][加热] CH2=CH2↑ + H2O',
+    answer: 'CH3CH2OH →[浓硫酸][加热] CH2=CH2↑ + H2O',
     hint: '条件为浓硫酸并加热（170℃），产物是乙烯',
   },
   {
@@ -2239,7 +2239,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '乙醇与氢溴酸反应制溴乙烷',
-    answer: 'CH3CH2OH + HBr =[加热] CH3CH2Br + H2O',
+    answer: 'CH3CH2OH + HBr →[加热] CH3CH2Br + H2O',
     hint: '醇与氢卤酸取代，羟基被卤素原子替代',
   },
   {
@@ -2248,7 +2248,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '甲醇催化氧化制甲醛',
-    answer: '2CH3OH + O2 =[催化剂][加热] 2HCHO + 2H2O',
+    answer: '2CH3OH + O2 →[催化剂][加热] 2HCHO + 2H2O',
     hint: '伯醇催化氧化生成醛，甲醛是 35%~40% 福尔马林的主要成分',
   },
   {
@@ -2257,7 +2257,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '苯酚与氢氧化钠溶液反应（苯酚显弱酸性）',
-    answer: 'C6H5OH + NaOH = C6H5ONa + H2O',
+    answer: 'C6H5OH + NaOH → C6H5ONa + H2O',
     hint: '苯酚具有弱酸性，能与碱反应生成苯酚钠',
   },
   {
@@ -2266,7 +2266,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '苯酚与碳酸钠溶液反应（酸性强于碳酸氢根）',
-    answer: 'C6H5OH + Na2CO3 = C6H5ONa + NaHCO3',
+    answer: 'C6H5OH + Na2CO3 → C6H5ONa + NaHCO3',
     hint: '苯酚酸性强于 HCO3-，只能与碳酸钠反应生成碳酸氢钠',
   },
   {
@@ -2275,7 +2275,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '苯酚与浓溴水反应（产生白色沉淀，检验苯酚）',
-    answer: 'C6H5OH + 3Br2 = C6H2Br3OH↓ + 3HBr',
+    answer: 'C6H5OH + 3Br2 → C6H2Br3OH↓ + 3HBr',
     hint: '苯环上三个氢被溴取代，生成 2,4,6-三溴苯酚白色沉淀',
   },
   {
@@ -2284,7 +2284,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第二节 醇 酚',
     description: '向苯酚钠溶液中通入二氧化碳（苯酚酸性弱于碳酸）',
-    answer: 'C6H5ONa + CO2 + H2O = C6H5OH + NaHCO3',
+    answer: 'C6H5ONa + CO2 + H2O → C6H5OH + NaHCO3',
     hint: '苯酚酸性弱于碳酸，但强于碳酸氢根，生成碳酸氢钠',
   },
   {
@@ -2293,7 +2293,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第三节 醛 酮',
     description: '乙醛催化氧化制乙酸',
-    answer: '2CH3CHO + O2 =[催化剂][加热] 2CH3COOH',
+    answer: '2CH3CHO + O2 →[催化剂][加热] 2CH3COOH',
     hint: '醛基被氧化为羧基，条件为催化剂并加热',
   },
   {
@@ -2302,7 +2302,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第三节 醛 酮',
     description: '乙醛与氢气加成（醛被还原为醇）',
-    answer: 'CH3CHO + H2 =[催化剂][加热] CH3CH2OH',
+    answer: 'CH3CHO + H2 →[催化剂][加热] CH3CH2OH',
     hint: '醛基加氢还原为羟基，条件为催化剂并加热',
   },
   {
@@ -2311,7 +2311,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第三节 醛 酮',
     description: '乙醛与银氨溶液反应（银镜反应，检验醛基）',
-    answer: 'CH3CHO + 2Ag(NH3)2OH =[加热] CH3COONH4 + 2Ag↓ + 3NH3 + H2O',
+    answer: 'CH3CHO + 2Ag(NH3)2OH →[加热] CH3COONH4 + 2Ag↓ + 3NH3 + H2O',
     hint: '银氨溶液写作 Ag(NH3)2OH；试管内壁析出光亮的银镜',
   },
   {
@@ -2320,7 +2320,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第三节 醛 酮',
     description: '乙醛与新制氢氧化铜反应（斐林反应，产生砖红色沉淀）',
-    answer: 'CH3CHO + 2Cu(OH)2 + NaOH =[加热] CH3COONa + Cu2O↓ + 3H2O',
+    answer: 'CH3CHO + 2Cu(OH)2 + NaOH →[加热] CH3COONa + Cu2O↓ + 3H2O',
     hint: '生成砖红色氧化亚铜 Cu2O 沉淀，可检验醛基',
   },
   {
@@ -2329,7 +2329,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第三节 醛 酮',
     description: '丙酮与氢气加成（酮被还原为仲醇）',
-    answer: 'CH3COCH3 + H2 =[催化剂][加热] CH3CH(OH)CH3',
+    answer: 'CH3COCH3 + H2 →[催化剂][加热] CH3CH(OH)CH3',
     hint: '羰基加氢还原为羟基，生成 2-丙醇（异丙醇）',
   },
   {
@@ -2338,7 +2338,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第四节 羧酸 羧酸衍生物',
     description: '硬脂酸甘油酯在氢氧化钠溶液中加热皂化（制肥皂）',
-    answer: '(C17H35COO)3C3H5 + 3NaOH =[加热] 3C17H35COONa + C3H5(OH)3',
+    answer: '(C17H35COO)3C3H5 + 3NaOH →[加热] 3C17H35COONa + C3H5(OH)3',
     hint: '油脂碱性水解生成硬脂酸钠（肥皂）和甘油',
   },
   {
@@ -2347,7 +2347,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第三章 烃的衍生物',
     section: '第四节 羧酸 羧酸衍生物',
     description: '乙酸乙酯在氢氧化钠溶液中加热水解（不可逆）',
-    answer: 'CH3COOC2H5 + NaOH =[加热] CH3COONa + C2H5OH',
+    answer: 'CH3COOC2H5 + NaOH →[加热] CH3COONa + C2H5OH',
     hint: '碱性条件水解生成乙酸盐和醇，OH- 消耗酯使水解趋于完全',
   },
   {
@@ -2356,7 +2356,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第一节 糖类',
     description: '葡萄糖与银氨溶液水浴加热反应（银镜反应，检验醛基）',
-    answer: 'CH2OH(CHOH)4CHO + 2Ag(NH3)2OH =[加热] CH2OH(CHOH)4COONH4 + 2Ag↓ + 3NH3 + H2O',
+    answer: 'CH2OH(CHOH)4CHO + 2Ag(NH3)2OH →[加热] CH2OH(CHOH)4COONH4 + 2Ag↓ + 3NH3 + H2O',
     hint: '葡萄糖含醛基，能还原银氨溶液生成银镜',
   },
   {
@@ -2365,7 +2365,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第一节 糖类',
     description: '葡萄糖与新制氢氧化铜悬浊液共热（检验葡萄糖）',
-    answer: 'CH2OH(CHOH)4CHO + 2Cu(OH)2 + NaOH =[加热] CH2OH(CHOH)4COONa + Cu2O↓ + 3H2O',
+    answer: 'CH2OH(CHOH)4CHO + 2Cu(OH)2 + NaOH →[加热] CH2OH(CHOH)4COONa + Cu2O↓ + 3H2O',
     hint: '碱性条件下生成砖红色氧化亚铜沉淀，用于糖尿病的尿糖检测',
   },
   {
@@ -2374,7 +2374,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第一节 糖类',
     description: '淀粉在稀硫酸催化下水解生成葡萄糖',
-    answer: '(C6H10O5)n + nH2O =[催化剂] nC6H12O6',
+    answer: '(C6H10O5)n + nH2O →[催化剂] nC6H12O6',
     hint: '淀粉（多糖）最终水解产物为葡萄糖（单糖）',
   },
   {
@@ -2383,7 +2383,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第一节 糖类',
     description: '纤维素在浓硫酸催化下加热水解生成葡萄糖',
-    answer: '(C6H10O5)n + nH2O =[浓硫酸][加热] nC6H12O6',
+    answer: '(C6H10O5)n + nH2O →[浓硫酸][加热] nC6H12O6',
     hint: '纤维素水解比淀粉困难，需浓硫酸并加热',
   },
   {
@@ -2392,7 +2392,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第二节 蛋白质',
     description: '甘氨酸分子间脱水缩合生成二肽（形成肽键）',
-    answer: '2H2NCH2COOH = H2NCH2CONHCH2COOH + H2O',
+    answer: '2H2NCH2COOH → H2NCH2CONHCH2COOH + H2O',
     hint: '两分子氨基酸脱去一分子水，形成 -CONH- 肽键',
   },
   {
@@ -2401,7 +2401,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第四章 生物大分子',
     section: '第二节 蛋白质',
     description: '甘氨酸与丙氨酸分子间脱水缩合生成二肽',
-    answer: 'H2NCH2COOH + H2NCH(CH3)COOH = H2NCH2CONHCH(CH3)COOH + H2O',
+    answer: 'H2NCH2COOH + H2NCH(CH3)COOH → H2NCH2CONHCH(CH3)COOH + H2O',
     hint: '不同氨基酸之间也可脱水缩合形成肽键',
   },
   {
@@ -2410,7 +2410,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '乙烯发生加聚反应生成聚乙烯',
-    answer: 'nCH2=CH2 =[催化剂] [-CH2-CH2-]n',
+    answer: 'nCH2=CH2 →[催化剂] [-CH2-CH2-]n',
     hint: '碳碳双键断裂，单体首尾相连形成高分子链',
   },
   {
@@ -2419,7 +2419,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '氯乙烯发生加聚反应生成聚氯乙烯（PVC）',
-    answer: 'nCH2=CHCl =[催化剂] [-CH2-CHCl-]n',
+    answer: 'nCH2=CHCl →[催化剂] [-CH2-CHCl-]n',
     hint: '聚氯乙烯常用于塑料管材，注意氯原子保留在链节中',
   },
   {
@@ -2428,7 +2428,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '丙烯发生加聚反应生成聚丙烯',
-    answer: 'nCH2=CHCH3 =[催化剂] [-CH2-CH(CH3)-]n',
+    answer: 'nCH2=CHCH3 →[催化剂] [-CH2-CH(CH3)-]n',
     hint: '甲基作为支链保留在高分子链的链节上',
   },
   {
@@ -2437,7 +2437,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '苯乙烯发生加聚反应生成聚苯乙烯',
-    answer: 'nC6H5CH=CH2 =[催化剂] [-CH(C6H5)-CH2-]n',
+    answer: 'nC6H5CH=CH2 →[催化剂] [-CH(C6H5)-CH2-]n',
     hint: '苯基作为侧链连在高分子主链上',
   },
   {
@@ -2446,7 +2446,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '1,3-丁二烯发生加聚反应生成顺丁橡胶',
-    answer: 'nCH2=CH-CH=CH2 =[催化剂] [-CH2-CH=CH-CH2-]n',
+    answer: 'nCH2=CH-CH=CH2 →[催化剂] [-CH2-CH=CH-CH2-]n',
     hint: '共轭二烯烃加聚，链节中保留一个碳碳双键',
   },
   {
@@ -2455,7 +2455,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第一节 合成高分子的基本方法',
     description: '苯酚与甲醛缩聚生成酚醛树脂',
-    answer: 'nC6H5OH + nHCHO =[催化剂] [-C6H3OH-CH2-]n + nH2O',
+    answer: 'nC6H5OH + nHCHO →[催化剂] [-C6H3OH-CH2-]n + nH2O',
     hint: '苯酚苯环上羟基对位与甲醛缩合，脱去水分子',
   },
   {
@@ -2464,7 +2464,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第二节 高分子材料',
     description: '对苯二甲酸与乙二醇缩聚生成涤纶（聚酯纤维）',
-    answer: 'nHOOC-C6H4-COOH + nHOCH2CH2OH =[催化剂] [-OC-C6H4-COOCH2CH2O-]n + 2nH2O',
+    answer: 'nHOOC-C6H4-COOH + nHOCH2CH2OH →[催化剂] [-OC-C6H4-COOCH2CH2O-]n + 2nH2O',
     hint: '酯化型缩聚反应，每形成一对酯基脱去两分子水',
   },
   {
@@ -2473,7 +2473,7 @@ export const QUESTIONS: Question[] = [
     chapter: '第五章 合成高分子',
     section: '第二节 高分子材料',
     description: '己二酸与己二胺缩聚生成尼龙-66（聚酰胺）',
-    answer: 'nHOOC(CH2)4COOH + nH2N(CH2)6NH2 =[催化剂] [-NH(CH2)6NHCO(CH2)4CO-]n + 2nH2O',
+    answer: 'nHOOC(CH2)4COOH + nH2N(CH2)6NH2 →[催化剂] [-NH(CH2)6NHCO(CH2)4CO-]n + 2nH2O',
     hint: '酰胺化缩聚反应，每形成一对酰胺键脱去两分子水',
   },
   {

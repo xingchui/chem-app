@@ -76,8 +76,10 @@ export function eqToLatex(eq: ParsedEquation): string {
     case '⇌':
       arrow = '\\rightleftharpoons'
       break
+    case '→':
+      arrow = '\\rightarrow'
+      break
     default:
-      // 不可逆反应：= 与 → 等价，统一显示为等号
       arrow = '='
   }
   if (above || below) {
