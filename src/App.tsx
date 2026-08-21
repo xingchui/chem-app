@@ -11,6 +11,15 @@ import {
   getSections,
   getSectionQuestions,
 } from './questions'
+import {
+  type CustomQuestion,
+  type ParseResult,
+  loadCustomQuestions,
+  saveCustomQuestions,
+  parseCustomText,
+  exportToJSON,
+  importFromJSON,
+} from './customQuestions'
 import './App.css'
 
 // ── 本地统计 ──
@@ -54,8 +63,8 @@ const CTRL_MAP: Record<string, string> = {
   '6': '△', '7': '₂', '8': '⁺', '9': '⁻', '0': '℃',
 }
 
-type View = 'home' | 'select-book' | 'select-chapter' | 'select-section' | 'practice' | 'stats'
-type Mode = 'chapter' | 'random'
+type View = 'home' | 'select-book' | 'select-chapter' | 'select-section' | 'practice' | 'stats' | 'custom-bank'
+type Mode = 'chapter' | 'random' | 'custom'
 
 function renderLatex(latex: string): string {
   return katex.renderToString(latex, { throwOnError: false, displayMode: true })
@@ -98,6 +107,12 @@ function App() {
   const [showHint, setShowHint] = useState(false)
   const [stats, setStats] = useState<Stats>(loadStats)
   const inputRef = useRef<HTMLTextAreaElement>(null)
+  // ── 自定义题库 ──
+  const [customQuestions, setCustomQuestions] = useState<CustomQuestion[]>(() => loadCustomQuestions())
+  const [bankText, setBankText] = useState('')
+  const [parseResults, setParseResults] = useState<ParseResult[]>([])
+  const [showImport, setShowImport] = useState(false)
+  const [importText, setImportText] = useState('')
 
   const q = questions[qIndex]
   const preview = usePreview(input)
@@ -150,10 +165,31 @@ function App() {
     setView('practice')
   }
 
-  /** 再来一轮：章节练习重练本节，随机练习重新洗牌 */
+  /** 自定义练习：使用自定义题库 */
+  function startCustomPractice() {
+    if (customQuestions.length === 0) {
+      window.alert('请先添加自定义题目')
+      return
+    }
+    const qs = customQuestions.map(q => ({
+      ...q,
+      book: '自定义',
+      chapter: '自定义',
+      section: '自定义',
+    }))
+    setMode('custom')
+    setQuestions(shuffle(qs))
+    setQIndex(0)
+    resetQuestionState(qs.length)
+    setView('practice')
+  }
+
+  /** 再来一轮：章节练习重练本节，随机练习重新洗牌，自定义练习重新洗牌 */
   function restart() {
     if (mode === 'chapter') {
       startSectionPractice(selBook, selChapter, selSection)
+    } else if (mode === 'custom') {
+      startCustomPractice()
     } else {
       startRandomPractice()
     }
@@ -248,7 +284,7 @@ function App() {
   }, [view, finished, judgement, input])
 
   const totalAccuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0
-  const modeLabel = mode === 'random' ? '随机练习' : `${selBook} · ${selChapter} · ${selSection}`
+  const modeLabel = mode === 'random' ? '随机练习' : mode === 'custom' ? '自定义练习' : `${selBook} · ${selChapter} · ${selSection}`
 
   // ── 首页（模式选择） ──
   if (view === 'home') {
@@ -275,6 +311,16 @@ function App() {
               <div className="mode-icon">📊</div>
               <h3>学习统计</h3>
               <p>查看学习进度和正确率</p>
+            </button>
+            <button type="button" className="mode-card" onClick={() => setView('custom-bank')}>
+              <div className="mode-icon">✏️</div>
+              <h3>自定义题库</h3>
+              <p>导入方程式，自定义练习</p>
+            </button>
+            <button type="button" className="mode-card" onClick={startCustomPractice}>
+              <div className="mode-icon">🎯</div>
+              <h3>自定义练习</h3>
+              <p>练习自定义题库中的方程式</p>
             </button>
           </div>
         </section>
@@ -417,6 +463,173 @@ function App() {
     )
   }
 
+  // ── 自定义题库管理视图 ──
+  if (view === 'custom-bank') {
+    function handleParse() {
+      if (!bankText.trim()) return
+      setParseResults(parseCustomText(bankText))
+    }
+
+    function handleSave() {
+      const successItems = parseResults.filter(r => r.success && r.question)
+      if (successItems.length === 0) {
+        window.alert('没有可保存的题目')
+        return
+      }
+      const newQuestions = successItems.map(r => r.question!)
+      const updated = [...customQuestions, ...newQuestions]
+      saveCustomQuestions(updated)
+      setCustomQuestions(updated)
+      setBankText('')
+      setParseResults([])
+      window.alert(`已保存 ${newQuestions.length} 道题目`)
+    }
+
+    function handleDelete(id: number) {
+      const updated = customQuestions.filter(q => q.id !== id)
+      saveCustomQuestions(updated)
+      setCustomQuestions(updated)
+    }
+
+    function handleClearAll() {
+      if (!window.confirm('确定要清空所有自定义题目吗？')) return
+      saveCustomQuestions([])
+      setCustomQuestions([])
+    }
+
+    function handleImport() {
+      try {
+        const imported = importFromJSON(importText)
+        const updated = [...customQuestions, ...imported]
+        saveCustomQuestions(updated)
+        setCustomQuestions(updated)
+        setImportText('')
+        setShowImport(false)
+        window.alert(`已导入 ${imported.length} 道题目`)
+      } catch (e) {
+        window.alert('导入失败：' + (e instanceof Error ? e.message : '格式错误'))
+      }
+    }
+
+    function handleExport() {
+      if (customQuestions.length === 0) {
+        window.alert('暂无自定义题目')
+        return
+      }
+      const json = exportToJSON(customQuestions)
+      const blob = new Blob([json], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = '化学方程式自定义题库.json'
+      a.click()
+      URL.revokeObjectURL(url)
+    }
+
+    return (
+      <main className="app">
+        <header className="app-header">
+          <h1>化学方程式练习</h1>
+          <p>自定义题库</p>
+        </header>
+        <section className="card">
+          <h2 className="card-title">添加题目</h2>
+          <p className="hint-small">每行一个方程式，例：</p>
+          <pre className="bank-example">{'2H2 + O2 = 2H2O\nFe2O3 + 3CO =[高温] 2Fe + 3CO2↑\nCH4 + 2O2 =[点燃] CO2 + 2H2O'}</pre>
+          <div className="input-area">
+            <textarea
+              value={bankText}
+              onChange={e => setBankText(e.target.value)}
+              placeholder="粘贴化学方程式，每行一个..."
+              rows={6}
+              spellCheck={false}
+            />
+          </div>
+          <div className="button-group">
+            <button type="button" className="btn btn-primary" onClick={handleParse} disabled={!bankText.trim()}>
+              解析
+            </button>
+          </div>
+          {parseResults.length > 0 && (
+            <div className="parse-results">
+              <p className="parse-summary">
+                成功 <strong>{parseResults.filter(r => r.success).length}</strong> / {parseResults.length} 条
+              </p>
+              <ul className="parse-list">
+                {parseResults.map((r, i) => (
+                  <li key={i} className={r.success ? 'parse-ok' : 'parse-err'}>
+                    <span className="parse-line">L{r.line}</span>
+                    <span className="parse-text">{r.text}</span>
+                    {r.error && <span className="parse-error-msg">{r.error}</span>}
+                  </li>
+                ))}
+              </ul>
+              <div className="button-group">
+                <button type="button" className="btn btn-success" onClick={handleSave} disabled={!parseResults.some(r => r.success)}>
+                  保存到题库
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+
+        <section className="card">
+          <h2 className="card-title">已保存题目 ({customQuestions.length})</h2>
+          {customQuestions.length === 0 ? (
+            <p className="hint-small">暂无自定义题目</p>
+          ) : (
+            <ul className="custom-list">
+              {customQuestions.map(q => (
+                <li key={q.id} className="custom-item">
+                  <span className="custom-text">{q.answer}</span>
+                  <button type="button" className="btn btn-danger btn-sm" onClick={() => handleDelete(q.id)}>
+                    删除
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="button-group">
+            <button type="button" className="btn btn-ghost" onClick={() => setShowImport(v => !v)}>
+              导入 JSON
+            </button>
+            <button type="button" className="btn btn-ghost" onClick={handleExport} disabled={customQuestions.length === 0}>
+              导出 JSON
+            </button>
+            <button type="button" className="btn btn-danger btn-sm" onClick={handleClearAll} disabled={customQuestions.length === 0}>
+              清空全部
+            </button>
+          </div>
+          {showImport && (
+            <div className="import-area">
+              <textarea
+                value={importText}
+                onChange={e => setImportText(e.target.value)}
+                placeholder='粘贴 JSON 数据...'
+                rows={4}
+                spellCheck={false}
+              />
+              <div className="button-group">
+                <button type="button" className="btn btn-primary" onClick={handleImport} disabled={!importText.trim()}>
+                  确认导入
+                </button>
+                <button type="button" className="btn btn-secondary" onClick={() => { setShowImport(false); setImportText('') }}>
+                  取消
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+
+        <div className="button-group">
+          <button type="button" className="btn btn-secondary" onClick={() => setView('home')}>
+            返回
+          </button>
+        </div>
+      </main>
+    )
+  }
+
   // ── 统计视图 ──
   if (view === 'stats') {
     return (
@@ -505,7 +718,7 @@ function App() {
           <span className="question-counter">
             第 {qIndex + 1} / {questions.length} 题
           </span>
-          <span className="tag">{mode === 'random' ? '随机' : '章节'}</span>
+          <span className="tag">{mode === 'random' ? '随机' : mode === 'custom' ? '自定义' : '章节'}</span>
         </div>
 
         <div className="question-card">

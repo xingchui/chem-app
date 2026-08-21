@@ -511,3 +511,118 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ── 自定义题库 ── */
+.bank-example {
+  background: #f8f9fa;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+  white-space: pre-wrap;
+}
+
+.parse-results {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.parse-summary {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.parse-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.parse-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: 'Consolas', monospace;
+}
+
+.parse-ok {
+  background: var(--ok-bg);
+}
+
+.parse-err {
+  background: var(--err-bg);
+}
+
+.parse-line {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 30px;
+}
+
+.parse-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.parse-error-msg {
+  color: var(--err);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.custom-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+}
+
+.custom-text {
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 12px;
+}
+
+.import-area {
+  margin-top: 12px;
+}
+
+.import-area textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Consolas', monospace;
+  resize: vertical;
+  margin-bottom: 8px;
+}
