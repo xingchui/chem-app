@@ -540,6 +540,19 @@ function App() {
             <textarea
               value={bankText}
               onChange={e => setBankText(e.target.value)}
+              onPaste={e => {
+                const text = e.clipboardData?.getData('text') ?? ''
+                if (text) {
+                  e.preventDefault()
+                  setBankText(prev => {
+                    const el = e.target as HTMLTextAreaElement
+                    const start = el.selectionStart ?? prev.length
+                    const end = el.selectionEnd ?? prev.length
+                    const next = prev.slice(0, start) + text + prev.slice(end)
+                    return next
+                  })
+                }
+              }}
               placeholder="粘贴化学方程式，每行一个..."
               rows={6}
               spellCheck={false}
@@ -605,6 +618,18 @@ function App() {
               <textarea
                 value={importText}
                 onChange={e => setImportText(e.target.value)}
+                onPaste={e => {
+                  const text = e.clipboardData?.getData('text') ?? ''
+                  if (text) {
+                    e.preventDefault()
+                    setImportText(prev => {
+                      const el = e.target as HTMLTextAreaElement
+                      const start = el.selectionStart ?? prev.length
+                      const end = el.selectionEnd ?? prev.length
+                      return prev.slice(0, start) + text + prev.slice(end)
+                    })
+                  }
+                }}
                 placeholder='粘贴 JSON 数据...'
                 rows={4}
                 spellCheck={false}
