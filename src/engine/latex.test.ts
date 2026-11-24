@@ -99,4 +99,18 @@ describe('eqToLatex', () => {
     const html = katex.renderToString(tex, { throwOnError: true })
     expect(html).toContain('Fe')
   })
+
+  it('条件中的特殊字符被转义且可渲染', () => {
+    const eq = {
+      reactants: [],
+      products: [],
+      arrow: '=' as const,
+      condAbove: '50% & $x_1$ # {a} \\ ~ ^',
+    }
+    const tex = eqToLatex(eq)
+    expect(tex).toContain(
+      '\\text{50\\% \\& \\$x\\_1\\$ \\# \\{a\\} \\textbackslash{} \\textasciitilde{} \\textasciicircum{}}',
+    )
+    expect(() => katex.renderToString(tex, { throwOnError: true })).not.toThrow()
+  })
 })

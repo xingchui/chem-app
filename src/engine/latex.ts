@@ -59,10 +59,23 @@ function fraction(c: number): [number, number] {
   return [Math.round(c * 100), 100]
 }
 
-/** 条件文本 → LaTeX 安全文本 */
+/** 条件文本 → LaTeX 安全文本：转义所有会破坏 \text{} 的字符 */
 function condToLatex(cond?: string): string {
   if (!cond) return ''
-  return `\\text{${cond.replace(/\\/g, '\\textbackslash ').replace(/\{/g, '\\{').replace(/\}/g, '\\}')}}`
+  // 单次扫描替换，避免转义结果被再次转义
+  const escaped = cond.replace(/[\\%&$#_{}^~]/g, ch => {
+    switch (ch) {
+      case '\\':
+        return '\\textbackslash{}'
+      case '^':
+        return '\\textasciicircum{}'
+      case '~':
+        return '\\textasciitilde{}'
+      default:
+        return `\\${ch}`
+    }
+  })
+  return `\\text{${escaped}}`
 }
 
 /** 方程式 → LaTeX（含箭头与上下条件） */
